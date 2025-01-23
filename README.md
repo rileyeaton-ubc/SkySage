@@ -9,7 +9,7 @@ This application was built by myself (Riley Eaton), Kai Gehry, Max Oberhellman, 
 3. Once the terminal prints that the frontend and backend have started, and the database has been initialized, you can visit the [home page](http://localhost:3000/) of the app on your local machine.
 4. Explore SkySage, and enjoy!
 
-If docker is giving you troubles at any point, you can run the docker cleanup script `clean_docker.bat` (or `clean_docker_mac.sh` on mac) in the root directory but **BE WARNED** this will wipe all docker images, containers, volumes etc. from your machine. 
+If docker is giving you troubles at any point, you can run the docker cleanup script `clean_docker.bat` (or `clean_docker.sh` on mac) in the root directory but **BE WARNED** this will wipe all docker images, containers, volumes etc. from your machine. 
 
 ## Project Description
 
