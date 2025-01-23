@@ -1,0 +1,19 @@
+// *************************************************************************************
+// COSC 310 Project - SkySage
+//
+// DESCRIPTION: Settings for settings when using a VSCode workspace for the project
+//
+// Author: Riley Eaton
+// Date: 2024-11-18
+// *************************************************************************************
+{
+  // Settings for Python testing using pytest in the tests folder
+  "python.testing.unittestArgs": ["-v", "-s", "./tests", "-p", "*_test.py"],
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestArgs": ["tests"],
+  // Ensure the black formatter is used for Python files
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  }
+}

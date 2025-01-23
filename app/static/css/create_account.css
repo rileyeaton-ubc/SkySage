@@ -1,0 +1,182 @@
+@import url("global.css");
+
+/* Universal reset for all elements */
+* {
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+  font-family: "Poppins", sans-serif; /* Set the default font family to Poppins (fallback to sans-serif) */
+  box-sizing: border-box; /* Include padding and borders in the element's total width and height */
+}
+
+/* Styling for the .hero section */
+.hero {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  box-sizing: border-box; /* Ensure the box-sizing is consistent */
+  font-family: Arial, sans-serif; /* Set the font to Arial for the hero section */
+  background: linear-gradient(
+    to bottom,
+    #4facfe,
+    #00f2fe
+  ); /* Set a gradient background */
+  color: #fff; /* Set the text color to white */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: flex-start; /* Align items to the top */
+  align-items: center; /* Center content horizontally */
+  height: 100vh; /* Make the hero section take up the full viewport height */
+}
+
+/* Styling for the h1 element inside .hero */
+.hero h1 {
+  font-size: 4rem; /* Set a large font size */
+  margin-top: 50px; /* Add space at the top */
+  margin-bottom: 10px; /* Add space at the bottom */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align items vertically in the center */
+  gap: 10px; /* Add space between elements (like an icon and text) */
+}
+
+/* Container for the sign-up form */
+.signup-box {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center content vertically */
+  flex-wrap: wrap; /* Allow wrapping of content */
+  width: 90%; /* Set the width to 90% of its parent container */
+  max-width: 800px; /* Limit the width to a maximum of 800px */
+  background: #fff; /* Set a white background */
+  box-shadow: 0px 2px 3px black; /* Add a subtle black shadow around the form */
+}
+
+/* Left section of the sign-up box */
+.left-box {
+  padding: 50px; /* Add padding inside the left section */
+  background: #41c5fc; /* Set a light blue background */
+  flex-basis: 50%; /* Set the left section to take up 50% of the container */
+  flex-grow: 1; /* Allow the left section to grow if necessary */
+  color: #fff; /* Set the text color to white */
+}
+
+/* Right section of the sign-up box */
+.right-box {
+  padding: 50px; /* Add padding inside the right section */
+  flex-basis: 50%; /* Set the right section to take up 50% of the container */
+  flex-grow: 1; /* Allow the right section to grow if necessary */
+  color: #fff; /* Set the text color to white */
+}
+
+/* Styling for input boxes inside the form */
+.input-box {
+  width: 100%; /* Make the input box take up the full width of its container */
+  padding: 10px; /* Add padding inside the input box */
+  margin: 10px 0; /* Add vertical margin between input fields */
+  border: 1px solid #fff; /* Add a white border */
+  outline: none; /* Remove the outline on focus */
+  color: #fff; /* Set the input text color to white */
+  font-size: 12px; /* Set a small font size */
+  background: transparent; /* Make the input background transparent */
+}
+
+/* Styling for placeholder text in inputs */
+::placeholder {
+  color: #fff; /* Set the placeholder text color to white */
+}
+
+/* Styling for checkbox input */
+input[type="checkbox"] {
+  margin-top: 30px; /* Add space at the top of the checkbox */
+}
+
+/* Label styling inside the left-box */
+.left-box label {
+  font-size: 14px; /* Set the font size for labels */
+}
+
+/* Styling for the submit button in the left-box */
+.left-box button {
+  width: 100%; /* Make the button take up the full width */
+  background: #fff; /* Set a white background */
+  padding: 10px; /* Add padding inside the button */
+  border: 0; /* Remove the border */
+  outline: none; /* Remove the outline */
+  font-size: 16px; /* Set the font size */
+  margin-top: 20px; /* Add space above the button */
+  cursor: pointer; /* Change the cursor to a pointer to indicate it's clickable */
+  transition: background 0.3s; /* Add a smooth transition effect for background change */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align button contents vertically */
+  justify-content: center; /* Align button contents horizontally */
+}
+
+/* Hover effect for the submit button */
+.left-box button:hover {
+  font-weight: 500; /* Make the font weight slightly bolder */
+  background: #000; /* Change background to black */
+  color: #fff; /* Change text color to white */
+}
+
+/* Styling for the span inside the button for hover effect */
+.left-box button span {
+  display: inline-block; /* Make the span an inline-block element */
+  width: 0px; /* Initially hide the span */
+  overflow: hidden; /* Hide the content of the span */
+  transition: width 0.5s; /* Animate the width change */
+}
+
+/* Expand the span width on button hover */
+.left-box button:hover span {
+  width: 30px; /* Set the width of the span when hovered */
+}
+
+/* Styling for links inside the right-box */
+.right-box a {
+  display: block; /* Make the link a block-level element */
+  width: 100%; /* Make the link take up the full width of the container */
+  margin: 20px 0; /* Add vertical margin between links */
+  min-width: 250px; /* Set a minimum width */
+  color: #fff; /* Set text color to white */
+  font-size: 14px; /* Set font size */
+  padding: 15px 30px; /* Add padding inside the link */
+  text-decoration: none; /* Remove underline from the link */
+}
+
+/* Styling for icons inside the right-box links */
+.right-box a i {
+  font-size: 18px; /* Set the icon size */
+  margin-right: 10px; /* Add space between the icon and the text */
+}
+
+/* Styling for the Facebook link */
+.fb-link {
+  background: #1778f2; /* Set a blue background */
+}
+
+/* Styling for the Google link */
+.g-link {
+  background: #ea4335; /* Set a red background */
+}
+
+/* Styling for the Apple link */
+.i-link {
+  background: grey; /* Set a grey background */
+}
+
+/* Styling for the login message section */
+.login-msg {
+  color: #fff; /* Set the text color to white */
+  margin-top: 30px; /* Add space above the message */
+  font-size: 15px; /* Set font size */
+}
+
+/* Styling for the login message link */
+.login-msg a {
+  color: darkblue; /* Set the link text color to dark blue */
+  text-decoration: none; /* Remove the underline from the link */
+  transition: text-decoration 0.4s; /* Smooth transition for underline effect */
+}
+
+/* Hover effect for the login message link */
+.login-msg a:hover {
+  color: blueviolet; /* Change text color to blueviolet on hover */
+  text-decoration: underline; /* Underline the link on hover */
+}

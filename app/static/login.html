@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- Character encoding for the document (UTF-8 ensures support for all characters) -->
+      <meta charset="UTF-8" />
+      <!-- Ensures the page is displayed correctly in Internet Explorer (IE) -->
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <!-- Meta tag for responsive design (fixed typo in 'viewport') -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- Page title -->
+      <title>Login Page</title>
+       <!-- Styles specific to the login page -->
+      <link rel="stylesheet" href="css/login.css" />
+      <!-- Link to FontAwesome for using icons like user and lock icons -->
+      <script
+         src="https://kit.fontawesome.com/8e1f3f5fa6.js"
+         crossorigin="anonymous"
+         ></script>
+      <!-- This is a placeholder for the javascript that will be used to implement 
+       login features-->
+   </head>
+   <body>
+      <nav class="navigation-bar"> <!-- Navigation bar to switch web pages -->
+      <ul>
+          <li><a href="home_page.html">Home</a></li>
+          <li><a href="dashboard_page.html">Dashboard</a></li>
+          <li><a href="login.html">Log In</a></li>
+          <li><a href="create_account.html">Create Account</a></li>
+      </ul>
+  </nav>
+      <!-- Wrapper div to contain the form and centralize its styling -->
+      <div class="wrapper">
+         <!-- The login form where users will input their credentials -->
+         <form action="">
+            <!-- Heading for the form, indicating the action (login) -->
+            <h1>Login</h1>
+            <!-- Input field for username, includes an icon inside the input field -->
+            <div class="input-box">
+               <input type="text" placeholder="Username" required />
+               <!-- FontAwesome icon for user -->
+               <i class="fa-solid fa-user"></i>
+            </div>
+            <!-- Input field for password, includes an icon inside the input field -->
+            <div class="input-box">
+               <input type="password" placeholder="Password" required />
+               <!-- FontAwesome icon for lock -->
+               <i class="fa-solid fa-lock"></i>
+            </div>
+            <!-- Section for the remember me checkbox and forgot password link -->
+            <div class="remember-forgot">
+               <!-- Remember me checkbox with a label -->
+               <label> <input type="checkbox" /> Remember me </label>
+               <!-- Link to forgot password page, styled as a hyperlink -->
+               <label><a class="link" href="#">Forgot password?</a></label>
+            </div>
+            <!-- Submit button for the login form -->
+            <button type="submit" class="btn">Login</button>
+            <!-- A section prompting users who don't have an account to register -->
+            <div class="register-link">
+               <p>Don't have an account? <a href="#">Register.</a></p>
+            </div>
+         </form>
+      </div>
+      <nav class="bottom-navigation-bar"> <!-- Navigation bar to go to the API Docs -->
+         <ul>
+             <li><a href="documentation.html">API Documentation for Developers</a></li>
+         </ul>
+       </nav>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <script type="module" src="./js/login_page.js"></script>
+   </body>
+</html>

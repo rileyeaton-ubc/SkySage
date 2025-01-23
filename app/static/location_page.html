@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" id="location">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkySage - Weather Info</title>
+    <link rel="stylesheet" href="./css/location.css" />
+  </head>
+  <body>
+    <nav class="navigation-bar"> <!-- Navigation bar to switch web pages -->
+      <ul>
+          <li><a href="home_page.html">Home</a></li>
+          <li><a href="dashboard_page.html">Dashboard</a></li>
+          <li><a href="login.html">Log In</a></li>
+          <li><a href="create_account.html">Create Account</a></li>
+      </ul>
+  </nav>
+  <h1 id="location-header">
+      <span id="location-name">Location</span>
+      <span class="heart-icon" id="favorite-icon" onclick="toggleFavorite()">&#9825;</span>
+  </h1>
+    <div class="tabs"> <!-- Two Tabs to Switch Between Current Wether and the 5-Day Forecast -->
+      <button class="tab active" onclick="switchTab('current-weather')">
+        Current Weather
+      </button>
+      <button class="tab" onclick="switchTab('forecast')">
+        5-Day Forecast
+      </button>
+    </div>
+    <!-- Display the Weather Info here-->
+    <div id="current-weather" class="tab-content active">
+    </div>
+    <!-- Display the Forecast Info here-->
+    <div id="forecast" class="tab-content">
+    </div>
+    <nav class="bottom-navigation-bar"> <!-- Navigation bar to go to the API Docs -->
+      <ul>
+          <li><a href="documentation.html">API Documentation for Developers</a></li>
+      </ul>
+    </nav>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="./js/location.js"></script>
+  </body>
+</html>

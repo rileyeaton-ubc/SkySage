@@ -1,0 +1,93 @@
+@import url("global.css");
+.favorites-container {
+    /* CSS for Favourites Container */
+    width: 80%;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .favorite-item {
+    /* CSS for Each Favourite Location Item */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .favorite-name {
+    /* CSS for Favourite Location's Name Display */
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .remove-button {
+    /* CSS for the Remove Button */
+    padding: 8px 12px;
+    border: none;
+    border-radius: 20px;
+    background-color: #ff5555;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .remove-button:hover {
+    /* CSS Colour Change for the Remove Button Hover */
+    background-color: #ff0000;
+  }
+  
+  .no-favorites {
+    /* CSS for Heart when it hasn't been Favourited */
+    text-align: center;
+    color: #555;
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+  
+  .share-container {
+    /* CSS for the Share Container */
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 800px;
+  }
+  
+  .username-input {
+    /* CSS for the Input Bar for the Username */
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .share-button {
+    /* CSS for the Share Button */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #ffffff;
+    color: #4facfe;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .share-button:hover {
+    /* CSS Colour Change for the Share Button Hover */
+    background-color: #4facfe;
+    color: #ffffff;
+  }
+  

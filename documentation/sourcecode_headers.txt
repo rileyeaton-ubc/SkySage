@@ -1,0 +1,10 @@
+For all source code files, lets use this header:
+
+*************************************************************************************
+COSC 310 Project - SkySage
+
+Description: Provide a brief description of what the code does
+
+Author: NAME
+Date: DATE
+*************************************************************************************

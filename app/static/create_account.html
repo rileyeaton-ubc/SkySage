@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Meta tag to define the character encoding and viewport settings for responsive design -->
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Title of the page displayed in the browser tab -->
+        <title>Create Account Page</title>
+        <!-- Main stylesheet for styling -->
+        <link rel="stylesheet" href="css/create_account.css" />
+        <!-- External font-awesome library for icons -->
+        <script src="https://kit.fontawesome.com/8e1f3f5fa6.js" crossorigin="anonymous"></script>
+        <!-- This is placeholder for the javascipt reference for back-end to excute the functionality of create account page -->
+    </head>
+    <body>
+        <nav class="navigation-bar"> <!-- Navigation bar to switch web pages -->
+            <ul>
+                <li><a href="home_page.html">Home</a></li>
+                <li><a href="dashboard_page.html">Dashboard</a></li>
+                <li><a href="login.html">Log In</a></li>
+                <li><a href="create_account.html">Create Account</a></li>
+            </ul>
+        </nav>
+        <!-- Container for the main content of the page -->
+        <div class="hero">
+            <h1>Create an account</h1>
+            <!-- Heading for the page -->
+            <!-- Signup box containing form and social login options -->
+            <div class="signup-box">
+                <!-- Left side box with the sign-up form -->
+                <div class="left-box">
+                    <form>
+                        <!-- Input fields for user details -->
+                        <input type="text" placeholder="Username" required class="input-box" />
+                        <input type="email" placeholder="Email" required class="input-box" />
+                        <input type="password" placeholder="Create Password" required class="input-box" />
+                        <input type="password" placeholder="Confirm Password" required class="input-box" />
+                        <!-- Checkbox for agreeing to the terms and conditions -->
+                        <input type="checkbox" placeholder="terms" />
+                        <label for="terms">I accept the terms & conditions.</label>
+                        <!-- Submit button with an icon indicating submission -->
+                        <button type="submit">SIGN UP <span>&#x27f6;</span></button>
+                    </form>
+                </div>
+                <!-- Right side box for social media login options -->
+                <div class="right-box">
+                    <!-- Links for social login, each with an associated icon -->
+                    <a href="" class="fb-link"> <i class="fa-brands fa-facebook"></i> Connect with Facebook </a>
+                    <a href="" class="g-link"> <i class="fa-brands fa-google"></i> Connect with Google </a>
+                    <a href="" class="i-link"> <i class="fa-brands fa-apple"></i> Connect with Apple </a>
+                </div>
+            </div>
+            <!-- Message prompting users who already have an account to log in -->
+            <p class="login-msg">I already have an account? <a href="#">Login Now</a></p>
+        </div>
+        <nav class="bottom-navigation-bar"> <!-- Navigation bar to go to the API Docs -->
+            <ul>
+                <li><a href="documentation.html">API Documentation for Developers</a></li>
+            </ul>
+          </nav>
+    </body>
+</html>

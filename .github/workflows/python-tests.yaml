@@ -1,0 +1,65 @@
+# *************************************************************************************
+# COSC 310 Project - SkySage
+#
+# Description: To automatically run tests on Python code (pytest) using GitHub Actions
+#
+# Author: Riley Eaton
+# Date: 11/19/2024
+# *************************************************************************************
+name: Python Automated Testing
+
+on:
+  # Trigger on pull requests targeting main, development, milestone, and feature branches
+  pull_request:
+    branches:
+      - main
+      - "*development*"
+      - "*milestone*"
+      - "*feature*"
+
+jobs:
+  # The python testing job
+  pytests:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Set up Python (version 3.12.0)
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.12.0"
+
+      # Install dependencies from the requirements file
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # Generate .env from secrets
+      - name: Generate .env from secrets
+        run: |
+          echo "${{ secrets.ENV_FILE }}" >> .env
+
+      # Run database testing
+      - name: Run Database Tests
+        # database tests
+        run: | 
+          pytest --capture=fd ./tests/db_init_test.py
+          pytest --capture=fd ./tests/db_test.py
+          pytest --capture=fd ./tests/user_endpoint_test.py
+          pytest --capture=fd ./tests/dashboard_endpoint_test.py
+          pytest --capture=fd ./tests/shared_dashboard_endpoint_test.py
+
+      # Run backend api testing
+      - name: Run Backend API Tests
+        run: |
+          pytest --capture=fd ./tests/weather_endpoint_test.py
+
+          pytest --capture=fd ./tests/location_endpoint_test.py
+
+          pytest --capture=fd ./tests/ai_endpoint_test.py
+          pytest --capture=fd ./tests/email_endpoint_test.py
+
+

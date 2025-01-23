@@ -1,0 +1,72 @@
+@import url("global.css");
+.search-container {
+  /* Parent container for search bar and button */
+  display: flex;
+  align-items: center; /* Align vertically in the middle */
+  justify-content: center; /* Center horizontally */
+  gap: 10px; /* Space between the bar and the button */
+  width: 100%; /* Allow full width if needed */
+  position: relative; /* Set position to relative for child positioning */
+}
+
+.search-bar {
+  /* CSS for Search Bar */
+  flex: 1; /* Makes the search bar take up more space relative to the button */
+  max-width: 700px; /* Adjust max width to make it wider */
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  outline: none;
+  text-align: center;
+}
+
+.search-button {
+  /* CSS for Search Button */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #ffffff;
+  color: #4facfe;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.search-button:hover {
+  /* CSS for Search Button Hover */
+  background-color: #4facfe;
+  color: #ffffff;
+}
+
+.suggestions-container {
+  /* border: 1px solid #ccc; */
+  background-color: #ffffff; /* Match the search bar's background */
+  position: absolute;
+  top: calc(100% + 5px); /* Add a small gap below the search bar */
+  left: 50%; /* Center relative to the parent */
+  transform: translateX(-50%); /* Align horizontally */
+  max-height: 150px;
+  overflow-y: auto;
+  width: 50%; /* Match the search bar's width */
+  z-index: 1000;
+  border-radius: 20px; /* Match the search bar's rounded corners */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+  color: black;
+  font-size: 1rem; /* Match the search bar's font size */
+  text-align: center; /* Match the search bar's text alignment */
+  border-bottom: 1px solid #f0f0f0; /* Add a divider between items */
+}
+
+.suggestion-item:last-child {
+  border-bottom: none; /* Remove border for the last item */
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0; /* Subtle hover effect */
+}

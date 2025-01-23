@@ -1,0 +1,115 @@
+/* Put all global css here */
+body {
+  /* CSS for the background that will be common theme amoong all the front-end*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #4facfe, #00f2fe);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  /* CSS for all H1 Headers */
+  font-size: 3rem;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;  
+  align-items: center;      
+  text-align: center;       
+  gap: 10px;         
+  padding: 0, 50px;            
+}
+
+.navigation-bar {  /* CSS for the Navigation bar itself */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #007acc;
+  color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.navigation-bar ul {
+  /* CSS for the whole list of items */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navigation-bar li {
+  /* CSS for each item in the list just for the margin */
+  margin: 0;
+}
+
+.navigation-bar a {
+  /* CSS for the text of the item */
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 25px;
+  transition: background-color 0.3s ease;
+}
+
+.navigation-bar a:hover {
+  /* CSS for hovering an item */
+  background-color: #005f99;
+  border-radius: 4px;
+}
+
+.bottom-navigation-bar {
+  /* Styles for the bottom navigation bar (API docs) itself */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #43aade;
+  color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.bottom-navigation-bar ul {
+  /* Styles for the list of items in the bottom navigation bar */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.bottom-navigation-bar li {
+  /* Styles for each item in the bottom navigation bar */
+  margin: 0;
+}
+
+.bottom-navigation-bar a {
+  /* Styles for the text of each item in the bottom navigation bar */
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+
+.bottom-navigation-bar a:hover {
+  /* Styles for hovering over an item in the bottom navigation bar */
+  background-color: #005f99;
+  border-radius: 4px;
+}

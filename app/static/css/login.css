@@ -1,0 +1,159 @@
+@import url("global.css");
+/* General resets for all elements */
+* {
+  margin: 0; /* Remove all default margins */
+  padding: 0; /* Remove all default padding */
+  box-sizing: border-box; /* Ensure that padding and borders are included in the element's total width and height */
+  font-family: "Poppins", sans-serif; /* Set the font family to Poppins or sans-serif if unavailable */
+}
+
+/* Styling for the body element */
+body {
+  display: flex; /* Use flexbox layout to easily center content */
+  justify-content: center; /* Align content horizontally to the center */
+  align-items: center; /* Align content vertically to the center */
+  min-height: 100vh; /* Ensure the body takes at least 100% of the viewport height */
+  background: linear-gradient(
+    to bottom,
+    #4facfe,
+    #00f2fe
+  ); /* Apply a gradient background from top to bottom */
+  background-size: cover; /* Ensure the background covers the entire body */
+  background-position: center; /* Center the background image */
+}
+
+/* Wrapper for the form container */
+.wrapper {
+  width: 420px; /* Set a fixed width for the form */
+  background: transparent; /* Make the background transparent */
+  border: 1px solid black; /* Add a black border (fixed typo 'sold' to 'solid') */
+  backdrop-filter: blur(20px); /* Apply a blur effect to the background */
+  box-shadow: 0 0 10px black; /* Add a subtle black shadow around the form */
+  color: #fff; /* Set text color to white */
+  border-radius: 10px; /* Rounded corners for the form */
+  padding: 30px 40px; /* Add padding inside the wrapper (top/bottom: 30px, left/right: 40px) */
+}
+
+/* Header (h1) styling inside the wrapper */
+.wrapper h1 {
+  font-size: 36px; /* Set the font size for the heading */
+  text-align: center; /* Center the heading text */
+  color: #fff; /* Set the color of the heading to white */
+}
+
+/* Styling for each input box inside the wrapper */
+.wrapper .input-box {
+  position: relative; /* Position relative to allow absolute positioning of child elements (like icons) */
+  width: 100%; /* Make the input box take the full width of its container */
+  height: 50px; /* Set a fixed height for the input box */
+  margin: 30px 0; /* Add margin to the top and bottom */
+}
+
+/* Styling for the input elements inside the .input-box */
+.input-box input {
+  width: 100%; /* Make the input take the full width of the box */
+  height: 100%; /* Make the input fill the entire height of the box */
+  background: transparent; /* Make the input background transparent */
+  outline: 0.3px solid rgb(28, 27, 27); /* Add a subtle outline when focused */
+  border: 2px solid rgba(255, 255, 255, 0.2); /* Light border for the input */
+  border-radius: 40px; /* Rounded edges for the input box */
+  font-size: 16px; /* Set the font size */
+  color: black; /* Set text color to black */
+  padding: 20px 45px 20px 20px; /* Padding inside the input (top/bottom: 20px, left: 20px, right: 45px) */
+}
+
+/* Placeholder text styling inside input boxes */
+.input-box input::placeholder {
+  color: #fff; /* Make the placeholder text white */
+}
+
+/* Styling for the icons inside the input boxes */
+.input-box i {
+  position: absolute; /* Position the icon absolutely within the input box */
+  right: 20px; /* Position the icon 20px from the right */
+  top: 50%; /* Vertically center the icon */
+  transform: translateY(
+    -50%
+  ); /* Adjust the vertical position to perfectly center the icon */
+  font-size: 20px; /* Set the font size of the icon */
+}
+
+/* Styling for the remember me checkbox and forgot password link */
+.wrapper .remember-forgot {
+  display: flex; /* Use flexbox to align items horizontally */
+  justify-content: space-between; /* Place items at opposite ends (checkbox and link) */
+  font-size: 14.5px; /* Set a small font size for the labels */
+  margin: -15px 0 15px; /* Adjust margins to make the section fit better */
+  transition: color 0.4s; /* Add a smooth color transition effect on hover */
+}
+
+/* Styling for the checkbox inside the remember-forgot section */
+.remember-forgot label input {
+  accent-color: #fff; /* Set the checkbox color to white */
+  margin-right: 3px; /* Add a small margin between the checkbox and the text */
+}
+
+/* Styling for the 'forgot password' link inside the remember-forgot section */
+.remember-forget a {
+  color: #fff; /* Make the link text white */
+  text-decoration: none; /* Remove underline from the link */
+}
+
+/* Hover effect for the forgot password link */
+.remember-forget a:hover {
+  color: black; /* Change text color to black when hovered */
+  text-decoration: none; /* Ensure no underline on hover */
+}
+
+/* Styling for general links (e.g., the 'Register' link) */
+.link {
+  color: white; /* Set the link text color to white */
+  text-decoration: none; /* Remove the underline from the link */
+}
+
+/* Hover effect for general links */
+.link:hover {
+  color: darkblue; /* Change text color to dark blue when hovered */
+  text-decoration: underline; /* Underline the link when hovered */
+}
+
+/* Styling for the login button */
+.wrapper .btn {
+  width: 100%; /* Make the button take the full width of the container */
+  height: 45px; /* Set a fixed height for the button */
+  background: #fff; /* Set the background color to white */
+  border: none; /* Remove the border */
+  outline: none; /* Remove the outline */
+  border-radius: 40px; /* Round the corners of the button */
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the button */
+  cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+  font-size: 16px; /* Set the font size */
+  color: #333; /* Set the text color to dark grey */
+  font-weight: 600; /* Set font weight to bold */
+}
+
+/* Hover effect for the login button */
+.wrapper .btn:hover {
+  background-color: black; /* Change the background to black when hovered */
+  color: white; /* Change the text color to white when hovered */
+}
+
+/* Styling for the register link section */
+.wrapper .register-link {
+  font-size: 14.5px; /* Set font size for the register section */
+  text-align: center; /* Center the text */
+  margin-top: 20px; /* Add top margin to create space */
+}
+
+/* Styling for the register link inside the register section */
+.register-link p a {
+  color: #fff; /* Set the link text color to white */
+  text-decoration: none; /* Remove the underline from the link */
+  font-weight: 600; /* Make the text bold */
+}
+
+/* Hover effect for the register link */
+.register-link p a:hover {
+  color: darkblue; /* Change text color to dark blue when hovered */
+  text-decoration: underline; /* Underline the link when hovered */
+}

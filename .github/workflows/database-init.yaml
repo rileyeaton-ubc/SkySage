@@ -1,0 +1,55 @@
+# *************************************************************************************
+# COSC 310 Project - SkySage
+#
+# Description: To automatically start docker containers using docker compose action
+#
+# Author: Riley Eaton
+# Date: 11/25/2024
+# *************************************************************************************
+
+name: Docker Compose (Start Backend)
+
+on:
+  # Trigger on pull requests targeting main, development, milestone, and feature branches
+  pull_request:
+    branches:
+      - main
+      - "*development*"
+      - "*milestone*"
+      - "*feature*"
+
+jobs:
+  build-containers:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Generate .env from secrets
+      - name: Generate .env from secrets
+        run: |
+          echo "OPENWEATHER_API_KEY=${{ secrets.OPENWEATHER_API_KEY }}" >> .env
+          echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" >> .env
+          echo "GOOGLE_MAPS_API_KEY=${{ secrets.GOOGLE_MAPS_API_KEY }}" >> .env
+          echo "MAILGUN_API_KEY=${{ secrets.MAILGUN_API_KEY }}" >> .env
+          echo "DB_ADMIN_PASSWORD=${{ secrets.DB_ADMIN_PASSWORD }}" >> .env
+          echo "DB_ADMIN_EMAIL=${{ secrets.DB_ADMIN_EMAIL }}" >> .env
+          echo "DB_SECONDARY_USER_PASSWORD=${{ secrets.DB_SECONDARY_USER_PASSWORD }}" >> .env
+          echo "DB_SECONDARY_USER_EMAIL=${{ secrets.DB_SECONDARY_USER_EMAIL }}" >> .env
+
+      # Use the docker-compose action from the marketplace compose-action@v2.0.1
+      - name: Run docker compose
+        uses: hoverkraft-tech/compose-action@v2.0.1
+        with:
+          compose-file: "./docker-compose.yml"
+
+      # Check exit status of the sqlite to ensure tests passed
+      - name: Verify container exit code
+        run: |
+          EXIT_CODE=$(docker inspect skysage-backend --format='{{.State.ExitCode}}')
+          if [ "$EXIT_CODE" -ne 0 ]; then
+            echo "Database initialization failed in the sqlite container"
+            exit 1
+          fi

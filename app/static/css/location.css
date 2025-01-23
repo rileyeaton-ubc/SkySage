@@ -1,0 +1,133 @@
+@import url("global.css");
+
+.heart-icon {
+  /* CSS for the Heart Icon */
+  font-size: 2rem;
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.heart-icon.favorited {
+  color: #ff5555; /* Red color for favorited state */
+}
+  
+  .tabs {
+    /* CSS for the Tabs in general */
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .tab {
+    /* CSS for each individual Tab */
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #4facfe;
+    color: #ffffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .tab:hover {
+    /* CSS for the Colour in the Tab Hover */
+    background-color: #ffffff;
+    color: #4facfe;
+  }
+  
+  .tab.active {
+    /* CSS for the Colour in the Current Tab */
+    background-color: #ffffff;
+    color: #4facfe;
+  }
+  
+  .tab-content {
+    width: 100%; 
+    max-width: 1200px; 
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    color: #333;
+    font-size: 1rem;
+    display: none; 
+    margin: 0 auto; 
+}
+  
+.tab-content.active {
+  display: grid; /* Only active tab's content is visible */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px; 
+  margin-top: 20px; 
+  max-height: 80vh; 
+  overflow-y: auto; 
+  padding: 10px; 
+  border-radius: 10px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+  
+  .weather-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .weather-item {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .forecast-info {
+    display: grid;
+    grid-template-columns: auto, auto, auto, auto, auto; /* Adjust columns for responsiveness */
+    gap: 20px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .forecast-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+  
+  .forecast-item strong {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .summary-header {
+    grid-column: 1 / span 5;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 10px 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #007bff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    gap: 10px; 
+}
+
+.summary-data {
+    grid-column: 1 / span 5;
+    padding: 15px;
+    font-size: 1rem;
+    color: #333333;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    line-height: 1.5;
+}
