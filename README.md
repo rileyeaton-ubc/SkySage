@@ -1,6 +1,6 @@
 # SkySage
 
-This application was built by myself (Riley Eaton), Kai Gehry, Max Oberhellman, and Mridul Nohria as our final project for COSC310: Software Engineering, at UBC.
+This application was built by myself (Riley Eaton), Kai Gehry, Max Oberhellman, and Mridul Nohria as our final project for **COSC310: Software Engineering, at UBC**.
 
 ## Quickstart 
 
