@@ -4,9 +4,10 @@ This application was built by myself (Riley Eaton), Kai Gehry, Max Oberhellman, 
 
 ## Quickstart 
 
-1. In the root folder (where this file is located) run `docker compose up --build`. After running this for the first time, you can simply run `docker compose up`.
-2. Once the terminal prints that the frontend and backend have started, and the database has been initialized, you can visit the [home page](http://localhost:3000/home_page.html) of the app on your local machine.
-3. Explore SkySage, and enjoy!
+1. Create a `.env` by copying the contents of the `.env_sample` file. The **Database Credentials** can be filled out with whatever you like, but the **API credentials** are real keys from each of the 4 providers. You must acquire each of these to enable the full site's functionalities. Alternatively, you can watch the [video walkthrough](https://youtu.be/xqPW8g70DHU) instead of self-hosting.
+2. In the root folder (where this file is located) run `docker compose up --build`. After running this for the first time, you can simply run `docker compose up`.
+3. Once the terminal prints that the frontend and backend have started, and the database has been initialized, you can visit the [home page](http://localhost:3000/) of the app on your local machine.
+4. Explore SkySage, and enjoy!
 
 If docker is giving you troubles at any point, you can run the docker cleanup script `clean_docker.bat` (or `clean_docker_mac.sh` on mac) in the root directory but **BE WARNED** this will wipe all docker images, containers, volumes etc. from your machine. 
 
@@ -15,6 +16,10 @@ If docker is giving you troubles at any point, you can run the docker cleanup sc
 SkySage is a web-based application to view current and upcoming weather trends all across the world in a digestible format, that can also be shared with friends. The weather data users can access is available in two formats: the current weather at a given location, and the 5-day forecast to see the weather trends in the near-future. User's of SkySage are able to search for their desired location (usually cities) with a vast amount of locations to choose from across the globe. This means people from any country can use SkySage to check the weather near them. Users can also create accounts (though not required for general browsing) to favourite the locations they want weather information on the most often. These favourited locations can then be viewed on the user's dashboard, which gives them a brief summary of the weather for each. Users can then share these dashboards with other users, so there is no need to duplicate favourites. A user can unfavourite a location or unshare a dashboard at any time on the site. Finally, SkySage brings unique AI augmentation to the weather forecast. Though natural language, an AI summary will be provided when viewing the 5-day weather forecast which will primarily describe the trend over the next 5 days and what to look out for (any potential hazards users should be aware of).
 
 In terms of technical details, SkySage uses external APIs to allow users to search for locations, retrieve weather data for a given location, and generate AI summaries. User data is stored in a relational database, and all personal identifiable information (including passwords) are hashed (salted) for security.
+
+## Video Walkthrough
+
+[Watch Here](https://youtu.be/xqPW8g70DHU)
 
 ---
 

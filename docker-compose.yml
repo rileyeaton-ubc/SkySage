@@ -1,0 +1,39 @@
+# ***********************************************************************************
+# COSC 310 Project - SkySage
+
+# Description: docker-compose file to run the main Dockerfile
+
+# Author: Kai Gehry, Riley Eaton
+# Date: 11/24/2024
+# ***********************************************************************************
+
+services: 
+  backend:
+    # Run the backend using the dockerfile in the root directory 
+    container_name: skysage-backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/skysage
+      - /skysage/app/models/database # create a volume for the database folder alone, essentially clearing it
+    # Expose the port 8000 to the host machine
+    ports:
+      - "8000:8000"
+    # Start the app using the uvicorn command
+    command: |
+      bash ./init_db.sh
+      uvicorn app.main:app --host 0.0.0.0 --port 8000
+
+  # Run the frontend using the frontend.Dockerfile 
+  frontend:
+    container_name: skysage-frontend
+    build:
+      context: .
+      dockerfile: frontend.Dockerfile 
+    # Expose container port 80 as host port 3000
+    ports:
+      - "3000:80"  
+    # Mount the static directory as a volume
+    volumes:
+      - ./app/static:/usr/share/nginx/html
